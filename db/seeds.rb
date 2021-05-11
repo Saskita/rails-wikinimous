@@ -1,3 +1,12 @@
+require 'faker'
+# TODO: Write a seed to insert 100 posts in the database
+
+10.times do
+  Article.create!(
+    title: Faker::Book.title,
+    content: Faker::Quotes::Shakespeare.hamlet_quote
+  )
+end
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
